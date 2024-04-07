@@ -73,50 +73,200 @@ a:hover {
   color: #f09228;
   text-decoration: none;
 }
+
 body,
 td,
 th,
 tr,
 p,
 a {
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px
 }
 
 strong {
-  font-family:  Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
 }
 
 heading {
-  font-family:  Verdana, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
 }
 
 papertitle {
-  font-family:  Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 300
+  font-weight: 700
 }
 
 name {
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
-.one {
-  width: 110px;
-  height: 110px;
+.wrap {
+  display: inline-block;
+}
+
+.intro {
+  padding:20px;
+  width:68%;
+  vertical-align:middle;
+}
+
+.headshort {
+  padding:20px;
+  width:35%;
+  max-width:35%;
+}
+
+@media (max-width: 675px) {
+  .intro {
+    padding: 20px 5px 20px 20px;
+  }
+
+  .headshort {
+    padding: 20px 2px 20px 5px;
+  }
+}
+
+.news_date1 {
+  padding: 0px 3px 0px 20px;
+  width: 0px;
+  vertical-align: top;
+  line-height: 1.5em;
+  color: darkblue;
+  white-space: nowrap;
+}
+
+.news_date2 {
+  padding: 0px 10px 0px 0px;
+  width: 0px;
+  vertical-align: top;
+  text-align: right;
+  line-height: 1.5em;
+  color: darkblue;
+  white-space: nowrap;
+}
+
+.news_details {
+  padding: 0px 20px 0px 10px;
+  vertical-align: top;
+  line-height: 1.5em;
+}
+
+.news_conf {
+  color: darkblue;
+}
+
+.news_oral {
+  color: darkblue;
+}
+
+.paper_tb {
+  padding: 15px 15px 15px 20px;
+  width: 35%;
+  vertical-align: top;
+}
+
+.paper_tb video {
+  border-radius: 10px;
+	border: 1px solid black;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.35);
+}
+
+.paper_tb img {
+  width: 100%;
+  border-radius: 10px;
+	border: 1px solid black;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.35);
+}
+
+.paper_conf {
+  font-style: italic;
+}
+
+.paper_spotlight {
+  color: red;
+}
+
+.tb_one {
+  width: 100%;
   position: relative;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.tb_two {
+  width: 100%;
+  position: relative;
+}
+
+.paper_details {
+  padding: 15px 20px 15px 15px;
+  width: 65%;
+  vertical-align: top;
+  line-height: 22px;
+}
+
+@media (max-width: 675px) {
+  .paper_entry td {
+    display: block;
+    float: left;
+  }
+
+  .paper_tb {
+    padding: 15px 20px 0px 20px;
+    width: 90%;
+  }
+
+  .paper_details {
+    padding: 15px 20px 15px 20px;
+    width: 90%;
+  }
+}
+
+.service_name {
+  padding: 0px 10px 0px 20px;
+  width: 0px;
+  vertical-align: top;
+  line-height: 1.5em;
+  color: darkblue;
+  white-space: nowrap;
+}
+
+
+.award_name {
+  padding: 0px 10px 0px 20px;
+  width: 0px;
+  vertical-align: top;
+  line-height: 1.5em;
+  color: black;
+  white-space: nowrap;
+}
+
+.contribution_name {
+  padding: 0px 10px 0px 20px;
+  width: 0px;
+  vertical-align: top;
+  line-height: 1.5em;
+  color: black;
+  white-space: nowrap;
+}
+
+.teaching_name {
+  padding: 0px 10px 0px 20px;
+  width: 0px;
+  vertical-align: top;
+  line-height: 1.5em;
+  color: black;
+  white-space: nowrap;
+}
+
+.service_details {
+  padding: 0px 20px 0px 10px;
+  vertical-align: top;
+  line-height: 1.5em;
 }
 
 .fade {
@@ -129,121 +279,16 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-
-#main_navigation {
-  font-size:14px;
-  height:50px;
-  text-align: center;
-  width:50%;
-  margin: 0 auto;
-
-}
-.main-menu {
-  position:relative;
-  z-index:22;
-  font-family:'Droid Sans', arial, serif;
-}
-.main-menu ul {
-  margin:0;
-  padding:0;
-  list-style-type:none;
-}
-.main-menu ul a:hover {
-  border-bottom:2px solid #0091ed;
-}
-.main-menu ul li {
-  position:relative;
-  display:inline;
-  float:left;
-  font-size:14px;
-}
-.main-menu ul li a,.main-menu ul li a:link,.main-menu ul li a:visited {
-  line-height:40px;
-  color:#363636;
-  font-size:14px;
-
-}
-.main-menu ul li a:hover {
-  color:#0091ed;
-}
-.main-menu ul li a {
-  display:block;
-  text-decoration:none;
-  overflow:hidden;
-  padding:0px 15px;
-}
-* html .main-menu ul li a {
-  display:inline-block;
-}
-.main-menu ul li ul {
-  position:absolute;
-  left:0px;
-  display:block;
-  visibility:hidden;
-}
-.main-menu ul li ul li {
-  display:list-item;
-  float:none;
-}
-.main-menu ul li ul li a {
-  width:160px;
-  padding:5px 10px;
-}
-.main-menu ul ul {
-  background:#FFF;
-  border:1px solid #e0e0e0;
-
-}
-.main-menu ul ul li a,.main-menu ul ul li a:link,.main-menu ul ul li a:visited {
-  height:100%;
-  line-height:20px;
-  background:transparent !important;
-  border-bottom:dotted 1px #e1e1e1;
-  padding:5px 10px!important;
-}
-.main-menuz ul li ul li a:hover,.main-menu ul ul li a:hover {
-  text-decoration:none!important;
-  margin:0 0px;
-  color:#0091ed;
-}
-.main-menuz ul ul li ul li a:hover,.main-menu ul ul ul li a:hover {
-  text-decoration:none!important;
-  width:155px;
-}
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.topic-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+.red { background-color: #ff5733; }
+.blue { background-color: hsl(249, 100%, 60%); }
+.green { background-color: hwb(130 20% 0%); }
+.orange { background-color: hwb(41 20% 0%); }
+.purple { background-color: hwb(300 20% 0%); }
