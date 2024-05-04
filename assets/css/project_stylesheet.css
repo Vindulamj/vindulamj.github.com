@@ -522,3 +522,7 @@ h3.results {
     float: left;
   }
 }
+
+.container {
+    text-align: center;
+}

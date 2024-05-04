@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+    Generalizing Cooperative Eco-driving via Multi-residual Task Learning
+  </title>
+  <meta content="RFC" property="og:title" />
+  <meta content="Generalizing Cooperative Eco-driving via Multi-residual Task Learning" name="description" property="og:description" />
+  <meta content="https://vindulamj.github.io/mrtl/" property="og:url" />
+  <meta name="keywords" content="reinforcement learning, eco-driving, generalization, toyota, mit, residual learning">
+
+  <link rel="stylesheet" href="../assets/css/project_stylesheet.css">
+  <link href="../data/misc/favicon.ico" rel="shortcut icon">
+  <link href="../data/misc/favicon_apple.ico" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../assets/academicons/css/academicons.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script defer src="../assets/js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+  <div class="n-header">
+  </div>
+  <div class="n-title">
+    <h1>
+      Generalizing Cooperative Eco-driving via Multi-residual Task Learning
+    </h1>
+  </div>
+  <div class="n-byline">
+    <div class="byline">
+      <ul class="authors">
+        <li>
+          <a href="https://vindulamj.github.io" target="_blank">Vindula Jayawardana</a><sup>1, 2</sup>
+        </li>
+        <li>
+          <a href="https://idss.mit.edu/staff/sirui-li/" target="_blank">Sirui Li</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="http://www.wucathy.com/blog/" target="_blank">Cathy Wu</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/yzfarid/" target="_blank">Yashar Farid</a><sup>2</sup>
+        </li>
+        <li>
+          <a href="https://amrd.toyota.com/division/itl/" target="_blank">Kentaro Oguchi</a><sup>1</sup>
+        </li>
+      </ul>
+      <ul class="authors affiliations">
+        <li>
+          <sup>
+            1
+          </sup>
+          MIT
+        </li>
+        <li>
+          <sup>
+            2
+          </sup>
+          Toyota North America
+        </li>
+      </ul>
+      <ul class="authors venue">
+        <li>
+          ICRA 2024
+        </li>
+      </ul>
+      <ul class="authors links">
+        <li>
+          <a href="https://arxiv.org/abs/2403.04232" target="_blank">
+            <button class="btn"><i class="fa fa-file-pdf"></i> Paper</button>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtu.be/7JqlRXKjGco" target="_blank">
+            <button class="btn"><i class="fab fa-youtube"></i> Video</button>
+          </a>
+        </li>
+        <li>
+          <a href="data/resources/icra24.pdf" target="_blank">
+            <button class="btn"><i class="fab fa-github"></i> Poster</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="n-article">
+    <div class="n-page video">
+      <video class="centered shadow" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="resources/teaser_video.mp4" type="video/mp4" />
+      </video>
+      <div class="videocaption" style="margin-bottom: 1rem">
+        <div>
+          Cooperative eco-driving with Multi-residual Task Learning under varying eco-driving adoption levels. Red vehicle are controlled using MRTL and yellow
+          vehicles are human-driven (using Intelligent Driver Model). Controlled vehicles learn to glide when they approach the intersection to avoid idling 
+          at the intersection and to form platoons to implicitly controll human-driven vehicles.
+        </div>   
+      </div>
+    </div>
+
+    <h2 id="abstract">
+      Abstract
+    </h2>
+    <p>
+      Conventional control, such as model-based control, is commonly utilized in autonomous driving due to its efficiency and reliability. However, real-world autonomous driving contends with a multitude of diverse traffic scenarios that are challenging for these planning algorithms. Model-free Deep Reinforcement Learning (DRL) presents a promising avenue in this direction, but learning DRL control policies that generalize to multiple traffic scenarios is still a challenge. To address this, we introduce Multi-residual Task Learning (MRTL), a generic learning framework based on multi-task learning that, for a set of task scenarios, decomposes the control into nominal components that are effectively solved by conventional control methods and residual terms which are solved using learning. We employ MRTL for fleet-level emission reduction in mixed traffic using autonomous vehicles as a means of system control. By analyzing the performance of MRTL across nearly 600 signalized intersections and 1200 traffic scenarios, we demonstrate that it emerges as a promising approach to synergize the strengths of DRL and conventional methods in generalizable control.
+    </p>
+
+    <h2>
+      Overview
+    </h2>
+    <p> We address the challenge of algorithmic
+      generalization<a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/96ca792fddef7c1e3366c405022463cb-Abstract-Conference.html">\(^1\)</a> for Deep Reinforcement Learning (DRL) across various scenarios, such as
+      different traffic scenarios in cooperative eco-driving. Formally, this can be formalized as solving Contextual Markov Decision Processes (CMDPs) <a href="https://arxiv.org/abs/1502.02259"> \(^2\)</a>. We
+      introduce Multi-residual Task Learning (MRTL), a generic
+      framework that combines DRL and conventional control
+      methods. MRTL divides each scenario into parts solvable
+      by conventional control and residuals solvable by DRL. The
+      final control input for a scenario is thus the superposition of
+      these two control inputs. We learn multiple residual terms across scenarios by conditioning the residual function on each sceanario. </p>
+
+    
+    <p>To put this formally, MRTL is concerned with augmenting a given nominal policy \(\pi_n(s, c): \mathcal{S} \times \mathcal{C} \rightarrow \mathcal{A}\) by learning residuals on top of it. In particular, we aim to learn the MRTL policy \(\pi(s, c): \mathcal{S} \times \mathcal{C} \rightarrow \mathcal{A}\) by learning a residual function \(f_\theta(s, c): \mathcal{S} \times \mathcal{C} \rightarrow \mathcal{A}\) on top of a given nominal policy \(\pi_n(s, c): \mathcal{S} \times \mathcal{C} \rightarrow \mathcal{A}\) such that,</p>
+    <div style="text-align: center;">
+    <p>\(\pi(s, c)=\pi_n(s, c)+f_\theta(s, c)\)</p>
+    </div>
+    <p>The gradient of the \(\pi\) does
+      not depend on the \(\pi_n\). This enables flexibility with nominal
+      policy choice.</p>
+
+    
+    <h2>
+      Video
+    </h2>
+    
+    <div class="video_wrapper shadow">
+      <iframe width="705" height="397" src="https://www.youtube.com/embed/7JqlRXKjGco" title="Generalizing Cooperative Eco-driving via Multi-residual Task Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h2>
+      Authors
+    </h2>
+    <div class="container">
+      <img class="figure" src="resources/authors.png" alt="MRTL authors" height="200" width="600">
+  </div>
+
+    <h2 id="citation">
+      Citation
+    </h2>
+    <pre class="bibtex">
+      <code>
+    @inproceedings{yuan2022glamr,
+      title={Generalizing Cooperative Eco-driving via Multi-residual Task Learning},
+      author={Jayawardana, Vindula and Li, Sirui and Wu, Cathy and Farid, Yashar and Ouguchi, Kentaro},
+      booktitle={International Conference on Robotics and Automation (ICRA)},
+      year={2024}
+    }
+      </code></pre>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:0px">
+            <br>
+            <p style="text-align:right;font-size:small;">
+              <a href="https://nvlabs.github.io/GLAMR" target="_blank" style="font-size: small;">Template</a>
+            </p>
+          </td>
+        </tr>
+      </tbody></table>
+
+  </div>
+</body>
+
+</html>
