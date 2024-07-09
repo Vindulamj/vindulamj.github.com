@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+    Mitigating Metropolitan Carbon Emissions with Dynamic Eco-driving at Scale
+  </title>
+  <meta content="ECo-drive" property="og:title" />
+  <meta content="Mitigating Metropolitan Carbon Emissions with Dynamic Eco-driving at Scale" name="description" property="og:description" />
+  <meta content="https://vindulamj.github.io/eco-drive/" property="og:url" />
+  <meta name="keywords" content="reinforcement learning, eco-driving, generalization, zurich, mit, mulit-task learning, autonomous vehicles, self driving cars">
+
+  <link rel="stylesheet" href="../assets/css/project_stylesheet.css">
+  <link href="../data/misc/favicon.ico" rel="shortcut icon">
+  <link href="../data/misc/favicon_apple.ico" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../assets/academicons/css/academicons.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script defer src="../assets/js/fontawesome.all.min.js"></script>
+  <style>
+  .container {
+  width: 70%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  width: 65vw; /* Reduced from 60vw to 55vw */
+  margin-left: calc((50% - 32.5vw)); /* Adjusted to center the narrower grid */
+}
+
+.grid-item {
+  flex: 1;
+  max-width: calc(65vw / 3); /* Adjusted to match the new grid width */
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+  </style>
+</head>
+
+<body>
+  <div class="n-header">
+  </div>
+  <div class="n-title">
+    <h1>
+      Mitigating Metropolitan Carbon Emissions with Dynamic Eco-driving at Scale
+    </h1>
+  </div>
+  <div class="n-byline">
+    <div class="byline">
+      <ul class="authors">
+        <li>
+          <a href="https://vindulamj.github.io" target="_blank">Vindula Jayawardana</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/baptiste-freydt/" target="_blank">Baptiste Freydt</a><sup>2</sup>
+        </li>
+        <li>
+          <a href="https://cee.mit.edu/people_individual/ao-qu/" target="_blank">Ao Qu</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/cameronhickert/" target="_blank">Cameron Hickert</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/edgar-rs/" target="_blank">Edgar Sanchez</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/catherine-tang-76699a193/" target="_blank">Catherine Tang</a><sup>1</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/mark-taylor-61152b36" target="_blank">Mark Tylor</a><sup>3</sup>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/blaine-leonard-332808a" target="_blank">Blaine Leonard</a><sup>3</sup>
+        </li>
+        <li>
+          <a href="http://www.wucathy.com/blog/" target="_blank">Cathy Wu</a><sup>1</sup>
+        </li>
+      </ul>
+      <ul class="authors affiliations">
+        <li>
+          <sup>
+            1
+          </sup>
+          MIT
+        </li>
+        <li>
+          <sup>
+            2
+          </sup>
+          ETH Zürich 
+        </li>
+        <li>
+          <sup>
+            3
+          </sup>
+          Utah Department of Transportation
+        </li>
+      </ul>
+      <ul class="authors venue">
+        <li>
+          In Review 2024
+        </li>
+      </ul>
+      <!-- <ul class="authors links">
+        <li>
+          <a href="https://arxiv.org/abs/2403.04232" target="_blank">
+            <button class="btn"><i class="fa fa-file-pdf"></i> Paper</button>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtu.be/a0jjtmqfBRo" target="_blank">
+            <button class="btn"><i class="fab fa-youtube"></i> Video</button>
+          </a>
+        </li>
+        <li>
+          <a href="resources/icra24.pdf" target="_blank">
+            <button class="btn"><i class="fa fa-file-archive"></i> Poster</button>
+          </a>
+        </li>
+        <li>
+          <a href="resources/icra24_slides.pdf" target="_blank">
+            <button class="btn"><i class="fa fa-tv"></i> Slides</button>
+          </a>
+        </li>
+      </ul> -->
+    </div>
+  </div>
+
+  <div class="n-article">
+    
+
+    <h2 id="abstract">
+      Abstract
+    </h2>
+    <p>
+      The sheer scale and diversity of transportation make it a formidable sector to decarbonize. Here, we consider an emerging opportunity to reduce carbon emissions: the growing adoption of semi-autonomous vehicles, which can be programmed to mitigate stop-and-go traffic through intelligent speed commands and, thus, reduce emissions. But would such \textit{dynamic eco-driving} move the needle on climate change? A comprehensive impact analysis has been out of reach, due to the vast array of traffic scenarios and the complexity of vehicle emissions. We use multi-task deep reinforcement learning to perform an in-depth prospective impact assessment of dynamic eco-driving at 6011 signalized intersections across three major US metropolitan cities, simulating a million traffic scenarios. Overall, we find that vehicle trajectories optimized for emissions can cut city-wide intersection carbon emissions by 11-22%, without harming throughput or safety, equivalent to the national emissions of Israel and Nigeria, respectively. We find that 10% eco-driving adoption yields 25%-50% of total reduction, and nearly 70% of the benefits come from 20% of intersections, suggesting near-term implementation pathways. However, the composition of this high-impact subset of intersections varies considerably across different adoption levels, with minimal overlap, calling for careful strategic planning for eco-driving deployments. Moreover, the impact of eco-driving, when considered jointly with projections of vehicle electrification, hybrid vehicle adoption, and travel growth, remains significant. More broadly, this work paves the way for large-scale analysis of traffic externalities, such as time, safety, and air quality, and the potential impact of solution strategies.
+    </p>
+
+    <h2>
+      Overview
+    </h2>
+    <div class="container">
+      <div class="image-grid">
+        <div class="grid-item"><img src="resources/atlanta.gif" alt="Image 1">
+          <figcaption>Atlanta (<a href="resources/downloads/atlanta-benefits.mp4" download="atlanta-benefits.mp4"> Download MP4</a> )</figcaption>
+        </div>
+        <div class="grid-item"><img src="resources/sf.gif" alt="Image 2">
+          <figcaption>San Francisco (<a href="resources/downloads/sf-benefits.mp4" download="san-francisco-benefits.mp4"> Download MP4</a> )</figcaption>
+        </div>
+        <div class="grid-item"><img src="resources/la.gif" alt="Image 3">
+          <figcaption>Los Angeles (<a href="resources/downloads/la-benefits.mp4" download="la-benefits.mp4"> Download MP4</a> )</figcaption>
+        </div>
+      </div>
+      <!-- Other content -->
+    </div>
+
+    <h2>
+      Introduction
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet sagittis dui, in auctor ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum non justo neque. Curabitur aliquet, mauris a aliquam ullamcorper, lectus lectus tincidunt neque, id facilisis ante orci ut quam. Donec ultricies lacinia dignissim. Nulla vitae lectus vitae ligula rutrum commodo. Vivamus et erat quam.
+    </p>
+    <p>
+Morbi tempor quam ac est condimentum condimentum. Phasellus ac eros ipsum. Nulla elementum dui ex, vitae vehicula ante porta vel. Curabitur at risus eu purus lacinia faucibus quis eu massa. Integer mollis tristique odio vel volutpat. Maecenas imperdiet, quam in malesuada aliquet, felis justo aliquam est, in pulvinar arcu ex a eros. Ut sed urna turpis. Pellentesque luctus fermentum arcu non vestibulum.
+</p>
+<p>
+Sed interdum neque sed arcu hendrerit accumsan quis ac mauris. Etiam posuere nibh mi. Nulla facilisi. Cras scelerisque mi tincidunt ex dapibus, et interdum metus condimentum. Integer a eleifend ipsum. Vestibulum sit amet ex tellus. Etiam nec facilisis risus, aliquam tristique nisi. Nunc quis efficitur leo, eu consequat sapien. In fringilla odio eget elit molestie, vel dignissim ex consectetur. Nam id tellus turpis.
+</p>
+<p>
+Donec tristique ullamcorper dictum. Vivamus ac varius orci, at hendrerit risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur volutpat turpis tincidunt condimentum ornare. Cras imperdiet nisl vel porttitor tempus. Vestibulum accumsan est eget sem tincidunt tincidunt. Ut odio lacus, egestas et imperdiet eu, feugiat non turpis. Duis ultrices nisl est, in pharetra est feugiat non. Suspendisse erat velit, bibendum quis dui sit amet, tempus vulputate velit.
+</p>
+<p>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed placerat a dui nec molestie. Vestibulum eu eros orci. Pellentesque a sodales ipsum. Morbi sem enim, mollis vitae felis sit amet, ullamcorper vulputate sem. Mauris sit amet volutpat enim. Integer vitae eros nunc. Pellentesque sapien urna, accumsan ac est ultricies, maximus ornare dui. Praesent ultrices vulputate augue sit amet aliquet. Pellentesque eget diam imperdiet, dapibus eros vel, consectetur neque. Duis ut interdum justo, et vehicula orci. Maecenas vulputate vulputate tellus, in lobortis velit ornare non. Suspendisse euismod sapien a mattis ullamcorper. Mauris dignissim tristique nisi, id aliquam mi sagittis sed. Integer in aliquet dolor, et vestibulum eros. Nunc congue sollicitudin venenatis.
+    </p>
+    <p>
+      </p>
+      <p></p>
+
+    <div class="container">
+      <div class="image-grid">
+        <div class="grid-item"><img src="resources/atlanta-co.gif" alt="Image 1">
+          <figcaption>Atlanta (<a href="resources/downloads/correlation_changes-atlanta.mp4" download="atlanta-ca.mp4"> Download MP4</a> )</figcaption>
+        </div>
+        <div class="grid-item"><img src="resources/sf-co.gif" alt="Image 2">
+          <figcaption>San Francisco (<a href="resources/downloads/correlation_changes-san francisco.mp4" download="san-francisco-ca.mp4"> Download MP4</a> )</figcaption>
+        </div>
+        <div class="grid-item"><img src="resources/la-co.gif" alt="Image 3">
+          <figcaption>Los Angeles (<a href="resources/downloads/correlation_changes-los angeles.mp4" download="la-ca.mp4"> Download MP4</a> )</figcaption>
+        </div>
+      </div>
+      <!-- Other content -->
+    </div>
+
+
+    <h2>
+      Introduction
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet sagittis dui, in auctor ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum non justo neque. Curabitur aliquet, mauris a aliquam ullamcorper, lectus lectus tincidunt neque, id facilisis ante orci ut quam. Donec ultricies lacinia dignissim. Nulla vitae lectus vitae ligula rutrum commodo. Vivamus et erat quam.
+    </p>
+    <p>
+Morbi tempor quam ac est condimentum condimentum. Phasellus ac eros ipsum. Nulla elementum dui ex, vitae vehicula ante porta vel. Curabitur at risus eu purus lacinia faucibus quis eu massa. Integer mollis tristique odio vel volutpat. Maecenas imperdiet, quam in malesuada aliquet, felis justo aliquam est, in pulvinar arcu ex a eros. Ut sed urna turpis. Pellentesque luctus fermentum arcu non vestibulum.
+</p>
+<p>
+Sed interdum neque sed arcu hendrerit accumsan quis ac mauris. Etiam posuere nibh mi. Nulla facilisi. Cras scelerisque mi tincidunt ex dapibus, et interdum metus condimentum. Integer a eleifend ipsum. Vestibulum sit amet ex tellus. Etiam nec facilisis risus, aliquam tristique nisi. Nunc quis efficitur leo, eu consequat sapien. In fringilla odio eget elit molestie, vel dignissim ex consectetur. Nam id tellus turpis.
+</p>
+<p>
+Donec tristique ullamcorper dictum. Vivamus ac varius orci, at hendrerit risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur volutpat turpis tincidunt condimentum ornare. Cras imperdiet nisl vel porttitor tempus. Vestibulum accumsan est eget sem tincidunt tincidunt. Ut odio lacus, egestas et imperdiet eu, feugiat non turpis. Duis ultrices nisl est, in pharetra est feugiat non. Suspendisse erat velit, bibendum quis dui sit amet, tempus vulputate velit.
+</p>
+<p>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed placerat a dui nec molestie. Vestibulum eu eros orci. Pellentesque a sodales ipsum. Morbi sem enim, mollis vitae felis sit amet, ullamcorper vulputate sem. Mauris sit amet volutpat enim. Integer vitae eros nunc. Pellentesque sapien urna, accumsan ac est ultricies, maximus ornare dui. Praesent ultrices vulputate augue sit amet aliquet. Pellentesque eget diam imperdiet, dapibus eros vel, consectetur neque. Duis ut interdum justo, et vehicula orci. Maecenas vulputate vulputate tellus, in lobortis velit ornare non. Suspendisse euismod sapien a mattis ullamcorper. Mauris dignissim tristique nisi, id aliquam mi sagittis sed. Integer in aliquet dolor, et vestibulum eros. Nunc congue sollicitudin venenatis.
+    </p>
+    <p>
+      </p>
+      <p></p>
+
+    <div class="container">
+      <div class="image-grid">
+        <div class="grid-item"><img src="resources/atlanta-pareto.gif" alt="Image 1">
+          <figcaption>Atlanta (<a href="resources/downloads/atlanta-pareto.mp4" download="atlanta-pareto.mp4"> Download MP4</a> )</figcaption>
+        </div>
+        <div class="grid-item"><img src="resources/sf-pareto.gif" alt="Image 2">
+          <figcaption>San Francisco (<a href="resources/downloads/sf.mp4" download="san-francisco-pareto.mp4"> Download MP4</a> )</figcaption>
+        </div>
+        <div class="grid-item"><img src="resources/la-pareto.gif" alt="Image 3">
+          <figcaption>Los Angeles (<a href="resources/downloads/la-pareto.mp4" download="la-pareto.mp4"> Download MP4</a> )</figcaption>
+        </div>
+      </div>
+      <!-- Other content -->
+    </div>
+
+
+    <h2>
+      Introduction
+    </h2>
+    <p>
+      TBA
+    </p>
+
+    
+</body>
+
+</html>
