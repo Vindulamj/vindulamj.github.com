@@ -291,4 +291,5 @@ span.highlight {
 .blue { background-color: hsl(249, 100%, 60%); }
 .green { background-color: hwb(130 20% 0%); }
 .orange { background-color: hwb(41 20% 0%); }
-.purple { background-color: hwb(300 20% 0%); }
+.purple { background-color: hwb(298 2% 72%); }
+.genai-color { background-color: hwb(300 20% 0%); }
