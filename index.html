@@ -28,10 +28,19 @@
   <!-- <script defer src="assets/js/fontawesome.all.min.js"></script> -->
   <style>
   .media-box {
-  border: 1px solid #100f0f;
+  border: 1px solid #ffffff;
   padding: 5px;
   margin-top: 5px;
   background-color: #f0f0eb;
+  display: inline-block; /* Change to inline-block for auto width */
+  border-radius: 5px;     /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */}
+
+  .media-box-conference {
+  border: 1px solid #ffffff;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: #dcdddd;
   display: inline-block; /* Change to inline-block for auto width */
   border-radius: 5px;     /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -209,18 +218,18 @@
               View this summer.</td>
           </tr>
           <tr>
-            <td class="news_date1">Dec</td>
-            <td class="news_date2">2022</td>
+            <td class="news_date1">Jan</td>
+            <td class="news_date2">2023</td>
             <td class="news_details">"The Impact of Task Underspecification in Evaluating Deep
               Reinforcement Learning" was accepted at <a href="https://nips.cc/">NeurIPS 2022 </a>.</td>
           </tr>
-          <tr>
+          <tr class="table_toggle" style="display:none;">
             <td class="news_date1">Dec</td>
             <td class="news_date2">2022</td>
             <td class="news_details">Our paper "Learning Surrogates for Diverse Emission Models" was accepted at
               <a href="https://nips.cc/">Climate Change AI at NeurIPS 2022</a>.</td>
           </tr>
-          <tr>
+          <tr class="table_toggle" style="display:none;">
             <td class="news_date1">Apr</td>
             <td class="news_date2">2022</td>
             <td class="news_details">Our recent work has been featured in <a
@@ -229,20 +238,20 @@
               href="https://lohdownonscience.com/green-driving/">The
               Loh Down on Science Podcast</a>.</td>
           </tr>
-          <tr>
+          <tr class="table_toggle" style="display:none;">
             <td class="news_date1">Jun</td>
             <td class="news_date2">2022</td>
             <td class="news_details">I am excited to receive 2022 <a
               href="https://www.eecs.mit.edu/2022-eecs-awards/">Harold L. Hazen
               Teaching Award</a> from EECS MIT.</td>
           </tr>
-          <tr>
+          <tr class="table_toggle" style="display:none;">
             <td class="news_date1">Jun</td>
             <td class="news_date2">2022</td>
             <td class="news_details">Our paper "The Braess Paradox in Dynamic Traffic" was accepted at <a
               href="https://www.ieee-itsc2022.org/">ITSC 2022</a>.</td>
           </tr>
-          <tr>
+          <tr class="table_toggle" style="display:none;">
             <td class="news_date1">May</td>
             <td class="news_date2">2022</td>
             <td class="news_details">Our recent work on eco-driving was featured as a spotlight on <a
@@ -344,7 +353,9 @@
               <td style="padding:0px 20px 0px 20px;width:100%;vertical-align:middle;">
                 <div style="display:flex;align-items:center;">
                   <div class="topic-circle red"></div>
-                  <h4 style="margin:0;margin-right:10px;">Reinforcement Learning</h4>
+                  <h4 style="margin:0;margin-right:10px">Reinforcement Learning</h4>
+                  <!-- <div class="topic-circle brown"></div>
+                  <h4 style="margin:0;margin-right:10px">Generative AI</h4> -->
                   <div class="topic-circle blue"></div>
                   <h4 style="margin:0;">Learning for Control</h4>
                   <div class="topic-circle green"></div>
@@ -353,6 +364,7 @@
                   <h4 style="margin:0;">Intelligent Transportation Systems</h4>
                   <div class="topic-circle purple"></div>
                   <h4 style="margin:0;">Natural Language Processing</h4>
+                  
                 </div>
               </td>
             </tr>
@@ -361,8 +373,40 @@
         
         <hr> 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
-          
+          <!-- <tr class="paper_entry">
+              <h3>To be Submitted</h3>
+          </tr>
+
+          <tr class="paper_entry_expand">
+                <ul>
+                  <li>
+                    <papertitle>Title</papertitle>
+                    <br>
+                    <strong class="wrap">Vindula Jayawardana</strong>,  
+                    <a class="wrap" target="_blank" href="https://idss.mit.edu/staff/sirui-li/">Sirui Li</a>, 
+                    <a class="wrap" target="_blank" href="https://www.linkedin.com/in/yzfarid/">Yashar Farid</a>,
+                    <a class="wrap" target="_blank" href="https://amrd.toyota.com/division/itl/">Kentaro Oguchi</a>,
+                    <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
+                    <br>
+                    <span class="paper_conf">In review 2025</strong></span> <br>
+                    <a class="wrap" target="_blank" href="https://github.com/mit-wu-lab/IntersectionZoo/"><i class="fab fa-github"></i> code</a> |
+                    <a class="wrap" target="_blank" href="https://intersectionzoo-docs.readthedocs.io/en/latest/"><i class="fa fa-globe"></i> project page</a> | -->
+<!--                     
+                    <div class="wrap topic-circle brown"></div>
+                    <div class="wrap topic-circle green"></div>
+                    <div class="wrap topic-circle purple"></div>
+                  </li>
+                </ul>
+          </tr> -->
+
+
+          <tr class="paper_entry">
+            <td>
+              <h3>In Review / To be Submitted </h3>
+            </td>
+          </tr>
+
+
           <tr class="paper_entry" id="rgb_nerf">
             <td class="paper_tb">
               <div class="tb_one">
@@ -383,7 +427,7 @@
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/zhongxiayan/">Zhongxia Yan</a>,
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
               <br>
-              <span class="paper_conf">In review 2024</strong></span> <br>
+              <span class="paper_conf">In review at International Conference on Learning Representations (ICLR) 2025</strong></span> <br>
               <a class="wrap" target="_blank" href="https://github.com/mit-wu-lab/IntersectionZoo/"><i class="fab fa-github"></i> code</a> |
               <a class="wrap" target="_blank" href="https://intersectionzoo-docs.readthedocs.io/en/latest/"><i class="fa fa-globe"></i> project page</a> |
               
@@ -392,6 +436,77 @@
             </td>
           </tr>
 
+          <tr class="paper_entry" id="rgb_nerf">
+            <td class="paper_tb">
+              <div class="tb_one">
+                <div class="tb_two">
+                  <img src="data/thumbnails/ral25.webp">
+                </div>
+              </div>
+            </td>
+            <td class="paper_details">
+              <a target="_blank" href="">
+                <papertitle>Multi-residual Mixture of Experts Learning for Cooperative Control in Multi-vehicle Systems</papertitle>
+              </a>
+              <br>
+              <strong class="wrap">Vindula Jayawardana</strong>,  
+              <a class="wrap" target="_blank" href="https://idss.mit.edu/staff/sirui-li/">Sirui Li</a>, 
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/yzfarid/">Yashar Farid</a>,
+              <a class="wrap" target="_blank" href="https://amrd.toyota.com/division/itl/">Kentaro Oguchi</a>,
+              <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
+              <br>
+              <span class="paper_conf">In review 2025</strong></span> <br>
+              <!-- <a class="wrap" target="_blank" href="https://github.com/mit-wu-lab/IntersectionZoo/"><i class="fab fa-github"></i> code</a> |
+              <a class="wrap" target="_blank" href="https://intersectionzoo-docs.readthedocs.io/en/latest/"><i class="fa fa-globe"></i> project page</a> | -->
+              
+              <div class="wrap topic-circle red"></div>
+              <div class="wrap topic-circle blue"></div>
+            </td>
+          </tr>
+
+          <tr class="paper_entry" id="rgb_nerf">
+            <td class="paper_tb">
+              <div class="tb_one">
+                <div class="tb_two">
+                  <img src="data/thumbnails/trc24.gif">
+                </div>
+              </div>
+            </td>
+            <td class="paper_details">
+              <a target="_blank" href="https://arxiv.org/abs/2408.05609">
+                <papertitle>Learning to Mitigating Metropolitan Carbon Emissions with Dynamic Eco-driving at Scale</papertitle>
+              </a>
+              <br>
+              <strong class="wrap">Vindula Jayawardana</strong>, 
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/baptiste-freydt/">Baptiste Freydt</a>, 
+              <a class="wrap" target="_blank" href="https://cee.mit.edu/people_individual/ao-qu/">Ao Qu</a>,
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/cameronhickert/">Cameron Hickert</a>,
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/edgar-rs/">Edgar Sanchez</a>,
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/catherine-tang-76699a193/">Catherine Tang</a>,
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/mark-taylor-61152b36">Mark Tylor</a>,
+              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/blaine-leonard-332808a">Blaine Leonard</a>,
+              <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
+              <br>
+              <span class="paper_conf">In review at </span> <span class="paper_year">Transportation Research Part C: Emerging Technologies 2024 </span> <br>
+              <a class="wrap" target="_blank" href="https://vindulamj.github.io/eco-drive/"><i class="fa fa-globe"></i> project page</a> |
+              <a class="wrap" target="_blank" href="https://arxiv.org/abs/2408.05609"><i class="fa fa-file-pdf"></i> arXiv</a> |
+              <div class="wrap topic-circle blue"></div>
+              <div class="wrap topic-circle orange"></div>
+              <br>
+              <div class="media-box">
+              Media: 
+              <a class="wrap" target="_blank" href="https://www.newscientist.com/article/2445202-a-simple-driving-trick-could-make-a-big-dent-in-cars-carbon-emissions/"><i class="fa fa-newspaper"></i> New Scientist</a> |
+              <a class="wrap" target="_blank" href="https://www.thecooldown.com/green-tech/mit-eco-driving-study-emissions-improve-combustion-engine-vehicle/"><i class="fa fa-newspaper"></i> The Cool Down</a> |
+              <a class="wrap" target="_blank" href="https://adas.mydigitalpublication.com/?i=810998&p=50"><i class="fa fa-newspaper"></i> Autonomous Vehicle International</a>
+            </div>
+            </td>
+          </tr>
+
+          <tr class="paper_entry">
+            <td>
+              <h3>Publications</h3>
+            </td>
+          </tr>
 
           <tr class="paper_entry" id="rgb_nerf">
             <td class="paper_tb">
@@ -411,8 +526,10 @@
               <a class="wrap" target="_blank" href="https://idss.mit.edu/staff/sirui-li/">Sirui Li</a>, 
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
               <br>
-              <strong><span class="paper_year">[NeurIPS 2024]</i></strong></span> <span class="paper_conf">Advances in Neural Information Processing Systems 2024</span>  <br>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[NeurIPS 2024]</i></strong></span> </div><span class="paper_conf">Advances in Neural Information Processing Systems 2024</span>  <br>
               <span class="paper_conf">Also at European Workshop on Reinforcement Learning 2024</span>
+              
               <br>
               <a class="wrap" target="_blank" href="https://jhoon-cho.github.io/MBTL/"><i class="fa fa-globe"></i> project page</a> |
               <a class="wrap" target="_blank" href="https://arxiv.org/abs/2408.04498"><i class="fa fa-file-pdf"></i> arXiv</a> |
@@ -425,48 +542,11 @@
 
               <div class="media-box">
                 Media:
-                <a class="wrap" target="_blank" href="https://www.newscientist.com/article/2445202-a-simple-driving-trick-could-make-a-big-dent-in-cars-carbon-emissions/"><i class="fa fa-newspaper"></i> MIT News</a> 
+                <a class="wrap" target="_blank" href="https://news.mit.edu/2024/mit-researchers-develop-efficiency-training-more-reliable-ai-agents-1122"><i class="fa fa-newspaper"></i> MIT News</a> 
               </div>
             </td>
           </tr>
 
-          <tr class="paper_entry" id="rgb_nerf">
-            <td class="paper_tb">
-              <div class="tb_one">
-                <div class="tb_two">
-                  <img src="data/thumbnails/trc24.gif">
-                </div>
-              </div>
-            </td>
-            <td class="paper_details">
-              <a target="_blank" href="https://arxiv.org/abs/2408.05609">
-                <papertitle>Mitigating Metropolitan Carbon Emissions with Dynamic Eco-driving at Scale</papertitle>
-              </a>
-              <br>
-              <strong class="wrap">Vindula Jayawardana</strong>, 
-              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/baptiste-freydt/">Baptiste Freydt</a>, 
-              <a class="wrap" target="_blank" href="https://cee.mit.edu/people_individual/ao-qu/">Ao Qu</a>,
-              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/cameronhickert/">Cameron Hickert</a>,
-              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/edgar-rs/">Edgar Sanchez</a>,
-              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/catherine-tang-76699a193/">Catherine Tang</a>,
-              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/mark-taylor-61152b36">Mark Tylor</a>,
-              <a class="wrap" target="_blank" href="https://www.linkedin.com/in/blaine-leonard-332808a">Blaine Leonard</a>,
-              <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
-              <br>
-              <span class="paper_conf">In review</span> <span class="paper_year">2024</span> <br>
-              <a class="wrap" target="_blank" href="https://vindulamj.github.io/eco-drive/"><i class="fa fa-globe"></i> project page</a> |
-              <a class="wrap" target="_blank" href="https://arxiv.org/abs/2408.05609"><i class="fa fa-file-pdf"></i> arXiv</a> |
-              <div class="wrap topic-circle blue"></div>
-              <div class="wrap topic-circle orange"></div>
-              <br>
-              <div class="media-box">
-              Media: 
-              <a class="wrap" target="_blank" href="https://www.newscientist.com/article/2445202-a-simple-driving-trick-could-make-a-big-dent-in-cars-carbon-emissions/"><i class="fa fa-newspaper"></i> New Scientist</a> |
-              <a class="wrap" target="_blank" href="https://www.thecooldown.com/green-tech/mit-eco-driving-study-emissions-improve-combustion-engine-vehicle/"><i class="fa fa-newspaper"></i> The Cool Down</a> |
-              <a class="wrap" target="_blank" href="https://adas.mydigitalpublication.com/?i=810998&p=50"><i class="fa fa-newspaper"></i> Autonomous Vehicle International</a>
-            </div>
-            </td>
-          </tr>
 
           <tr class="paper_entry" id="rgb_nerf">
             <td class="paper_tb">
@@ -487,7 +567,8 @@
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/yzfarid/">Yashar Farid</a>,
               <a class="wrap" target="_blank" href="https://amrd.toyota.com/division/itl/">Kentaro Oguchi</a>
               <br>
-              <strong><span class="paper_year">[ICRA 2024]</i></strong></span><span class="paper_conf"> International Conference on Robotics and Automation </span> <span class="paper_year">2024</span> <br>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ICRA 2024]</i></strong></span></div><span class="paper_conf"> International Conference on Robotics and Automation </span> <span class="paper_year">2024</span> <br>
               <span class="paper_conf">Also at Generalization in Planning workshop at NeurIPS</span> <span class="paper_year">2023</span> <br>
               <span class="paper_conf">Also at Machine Learning for Autonomous Driving Symposium</span> <span class="paper_year">2023</span>
               <br>
@@ -521,7 +602,8 @@
               <strong class="wrap">Vindula Jayawardana</strong>,  
               <a class="wrap" target="_blank" href="https://cee.cornell.edu/samitha/">Samitha Samaranayake</a>
               <br>
-              <strong><span class="paper_year">[TRC 2024]</i></strong></span> <span class="paper_conf"> Transportation Research Part C: Emerging Technologies</span> <span class="paper_year">2024</span> (major revision)
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[TRC 2024]</i></strong></span></div> <span class="paper_conf"> Transportation Research Part C: Emerging Technologies</span> <span class="paper_year">2024</span> (major revision)
               <br>
               <a class="wrap" target="_blank" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4801437"><i class="fa fa-file-pdf"></i> arXiv</a> | 
               <div class="wrap topic-circle blue"></div>
@@ -550,7 +632,8 @@
               <a class="wrap" target="_blank" href="https://dajiangsuo.github.io/">Dajiang Suo</a>, 
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
               <br>
-              <strong><span class="paper_year">[NeurIPS 2022]</i></strong></span><span class="paper_conf"> Advances in Neural Information Processing Systems </span> <span class="paper_year">2022</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[NeurIPS 2022]</i></strong></span></div><span class="paper_conf"> Advances in Neural Information Processing Systems </span> <span class="paper_year">2022</span>
               <br>
               <a class="wrap" target="_blank" href="https://vindulamj.github.io/rl-evaluations/"><i class="fa fa-globe"></i> project page</a> |
               <a class="wrap" target="_blank" href="https://arxiv.org/abs/2210.08607"><i class="fa fa-file-pdf"></i> arXiv</a> | 
@@ -581,7 +664,8 @@
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
               (* equal contribution)
               <br>
-              <strong><span class="paper_year">[T-ITS 2023]</i></strong></span><span class="paper_conf"> IEEE Transactions on Intelligent Transportation Systems (T-ITS)</span> <span class="paper_year">2023</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[T-ITS 2023]</i></strong></span></div><span class="paper_conf"> IEEE Transactions on Intelligent Transportation Systems (T-ITS)</span> <span class="paper_year">2023</span>
               <br>
               <a class="wrap" target="_blank" href="https://arxiv.org/abs/2312.10339"><i class="fa fa-file-pdf"></i> arXiv</a> | 
               <div class="wrap topic-circle blue"></div>
@@ -605,7 +689,8 @@
               <strong class="wrap">Vindula Jayawardana</strong>,  
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>, 
               <br>
-              <strong><span class="paper_year">[ECC 2022]</i></strong></span><span class="paper_conf"> European Control Conference</span> <span class="paper_year">2022</span> <br>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ECC 2022]</i></strong></span></div><span class="paper_conf"> European Control Conference</span> <span class="paper_year">2022</span> <br>
               <span class="paper_conf">Also at Robotics for Climate Change at ICRA </span> <span class="paper_year">2022</span>
               <br>
               <a class="wrap" target="_blank" href="https://vindulamj.github.io/eco-driving-rl/"><i class="fa fa-globe"></i> project page</a> |
@@ -645,7 +730,8 @@
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu*</a>
               (* equal supervision)
               <br>
-              <strong><span class="paper_year">[ITSC 2023]</i></strong></span><span class="paper_conf"> IEEE Intelligent Transportation Systems Conference </span> <span class="paper_year">2023</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ITSC 2023]</i></strong></span></div><span class="paper_conf"> IEEE Intelligent Transportation Systems Conference </span> <span class="paper_year">2023</span>
               <br>
               <a class="wrap" target="_blank" href="https://ieeexplore.ieee.org/document/10422120/"><i class="fa fa-file-pdf"></i> paper</a> | 
               <a class="wrap" target="_blank" href="data/misc/itsc23.pdf"><i class="fa fa-file-archive"></i> poster</a> | 
@@ -674,7 +760,8 @@
               <a class="wrap" target="_blank" href="https://dajiangsuo.github.io/">Dajiang Suo</a>, 
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
               <br>
-              <strong><span class="paper_year">[ITSC 2022]</i></strong></span><span class="paper_conf"> IEEE Intelligent Transportation Systems Conference </span> <span class="paper_year">2022</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ITSC 2022]</i></strong></span> </div><span class="paper_conf"> IEEE Intelligent Transportation Systems Conference </span> <span class="paper_year">2022</span>
               <br>
               <a class="wrap" target="_blank" href="http://arxiv.org/abs/2203.03726"><i class="fa fa-file-pdf"></i> arXiv</a> | 
               <div class="wrap topic-circle blue"></div>
@@ -699,7 +786,8 @@
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/alandler">Anna Landler</a>, 
               <a class="wrap" target="_blank" href="http://www.wucathy.com/blog/">Cathy Wu</a>
               <br>
-              <strong><span class="paper_year">[ITSC 2021]</i></strong></span><span class="paper_conf"> IEEE Intelligent Transportation Systems Conference </span> <span class="paper_year">2021</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ITSC 2021]</i></strong></span> </div><span class="paper_conf"> IEEE Intelligent Transportation Systems Conference </span> <span class="paper_year">2021</span>
               <br>
               <a class="wrap" target="_blank" href="https://ieeexplore.ieee.org/document/9565053"><i class="fa fa-file-pdf"></i> paper</a> | 
               <div class="wrap topic-circle blue"></div>
@@ -754,7 +842,8 @@
               <a class="wrap" target="_blank" href="https://buddhiayesha2015.github.io/">Buddhi Ayesha</a>,
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/madhavipererara/">Madhavi Perera</a>
               <br>
-              <strong><span class="paper_year">[ICTer 2017]</i></strong></span> <span class="paper_conf"> <span class="paper_conf"> International Journal on Advances in ICT for Emerging Regions</span> <span class="paper_year">2017</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ICTer 2017]</i></strong></span> </div><span class="paper_conf"> <span class="paper_conf"> International Journal on Advances in ICT for Emerging Regions</span> <span class="paper_year">2017</span>
               <br>
               </span><span class="paper_conf"> Seventeenth International Conference on Advances in ICT for Emerging Regions</span> <span class="paper_year">2017</span>
               <br>
@@ -783,7 +872,8 @@
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/keetmalin">Keet Sugathadasa</a>, 
               <a class="wrap" target="_blank" href="https://buddhiayesha2015.github.io/">Buddhi Ayesha</a>,
               <br>
-              <strong><span class="paper_year">[INTECH 2017]</i></strong></span> <span class="paper_conf"></span><span class="paper_conf"> Seventh International Conference on Innovative Computing Technology</span> <span class="paper_year">2017</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[INTECH 2017]</i></strong></span> <span class="paper_conf"></span></div><span class="paper_conf"> Seventh International Conference on Innovative Computing Technology</span> <span class="paper_year">2017</span>
               <br>
               <a class="wrap" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/8102426"><i class="fa fa-file-pdf"></i> paper</a> | 
               <div class="wrap topic-circle purple"></div>
@@ -812,7 +902,8 @@
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/dimuthukariyawasam/">Dimuthu Kariyawasam</a>,
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/madhavipererara/">Madhavi Perera</a>
               <br>
-              <span class="paper_conf">Computing Conference</span> <span class="paper_year">2017</span>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[CC 2017]</i></strong></span> <span class="paper_conf"></span></div><span class="paper_conf">Computing Conference</span> </div><span class="paper_year">2017</span>
               <br>
               <a class="wrap" target="_blank" href="https://arxiv.org/abs/1805.10685"><i class="fa fa-file-pdf"></i> arXiv</a> | 
               <div class="wrap topic-circle purple"></div>
@@ -841,7 +932,9 @@
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/dimuthukariyawasam/">Dimuthu Kariyawasam</a>,
               <a class="wrap" target="_blank" href="https://www.linkedin.com/in/madhavipererara/">Madhavi Perera</a>
               <br>
-              <strong><span class="paper_year">[ICIIS 2017]</i></strong></span> <span class="paper_conf"> </span><span class="paper_conf"> IEEE International Conference on Industrial and Information Systems </span> <span class="paper_year">2017</span>
+              </div>
+              <div class="media-box-conference">
+              <strong><span class="paper_year">[ICIIS 2017]</i></strong></span></div> <span class="paper_conf"> </span><span class="paper_conf"> IEEE International Conference on Industrial and Information Systems </span> <span class="paper_year">2017</span>
               <br>
               <a class="wrap" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/8300343"><i class="fa fa-file-pdf"></i> paper</a> | 
               <div class="wrap topic-circle purple"></div>
@@ -861,7 +954,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom:25px;"><tbody>
           <tr>
             <td class="contribution_name">
-              <a href="https://github.com/mit-wu-lab/IntersectionZoo/">IntersectionZoo: Benchmarking Contextual Reinforcement Learning </a> (31 <i class="fa fa-star" aria-hidden="true" style="color: rgb(233, 190, 18);"></i> stars) - Main contributor 
+              <a href="https://github.com/mit-wu-lab/IntersectionZoo/">IntersectionZoo: Benchmarking Contextual Reinforcement Learning </a> (35 <i class="fa fa-star" aria-hidden="true" style="color: rgb(233, 190, 18);"></i> stars) - Main contributor 
             </td>
           </tr>
           <tr>
@@ -871,7 +964,7 @@
           </tr>
           <tr>
             <td class="contribution_name">
-              <a href="https://github.com/wso2-incubator/scim2-compliance-test-suite">SCIM 2.0 Compliance Test Suite</a> (26 <i class="fa fa-star" aria-hidden="true" style="color: rgb(233, 190, 18);"></i> stars, 23 <i class="fa fa-code-fork" style="color: rgb(115, 110, 89);" aria-hidden="true"></i> folks on Github) - Main contributor
+              <a href="https://github.com/wso2-incubator/scim2-compliance-test-suite">SCIM 2.0 Compliance Test Suite</a> (27 <i class="fa fa-star" aria-hidden="true" style="color: rgb(233, 190, 18);"></i> stars, 23 <i class="fa fa-code-fork" style="color: rgb(115, 110, 89);" aria-hidden="true"></i> folks on Github) - Main contributor
             </td>
           </tr>
           <tr>
