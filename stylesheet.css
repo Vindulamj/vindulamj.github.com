@@ -93,6 +93,32 @@ heading {
   font-size: 22px;
 }
 
+.conf-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 6px; /* reduced from 999px */
+  color: #0c0101;
+  vertical-align: middle;
+  margin-right: 8px;
+  line-height: 1.6;
+}
+
+
+.ai-badge {
+  background-color: #e8b2b2; /* Choose a strong, distinctive color */
+}
+
+.mobility-badge {
+  background-color: #b8e7b1; /* Choose a strong, distinctive color */
+}
+
+.nlp-badge {
+  background-color: #b7ace9; /* Choose a strong, distinctive color */
+}
+
+
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
@@ -183,6 +209,17 @@ name {
   overflow: hidden;
   box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.35);
 }
+
+.paper_tb img {
+  width: 100%;
+  max-width: 300px;      /* Adjust as needed */
+  height: auto;
+  aspect-ratio: 16 / 8;   /* Or 1 / 1 for square, 16 / 9 for widescreen */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
 
 .paper_conf {
   font-style: italic;
@@ -298,3 +335,7 @@ span.highlight {
 .hidden {
   display: none;
 }
+
+.media-box {
+  background-color: #f0e3c3; /* Choose a strong, distinctive color */
+  }
