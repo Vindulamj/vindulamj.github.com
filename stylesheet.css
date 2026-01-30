@@ -81,7 +81,7 @@ tr,
 p,
 a {
   font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 14px
+  font-size: 13px;
 }
 
 strong {
@@ -107,15 +107,18 @@ heading {
 
 
 .ai-badge {
-  background-color: #e8b2b2; /* Choose a strong, distinctive color */
+  background-color: #f5b7b1;
+  color: black;
 }
 
 .mobility-badge {
-  background-color: #b8e7b1; /* Choose a strong, distinctive color */
+  background-color: #a5d6a7;
+  color: black;
 }
 
 .nlp-badge {
-  background-color: #b7ace9; /* Choose a strong, distinctive color */
+  background-color: #b39ddb;
+  color: black;
 }
 
 
@@ -160,7 +163,7 @@ name {
   padding: 0px 3px 0px 20px;
   width: 0px;
   vertical-align: top;
-  line-height: 1.5em;
+  line-height: 1.3em;
   color: darkblue;
   white-space: nowrap;
 }
@@ -170,7 +173,7 @@ name {
   width: 0px;
   vertical-align: top;
   text-align: right;
-  line-height: 1.5em;
+  line-height: 1.3em;
   color: darkblue;
   white-space: nowrap;
 }
@@ -178,7 +181,7 @@ name {
 .news_details {
   padding: 0px 20px 0px 10px;
   vertical-align: top;
-  line-height: 1.5em;
+  line-height: 1.3em;
 }
 
 .news_conf {
@@ -190,8 +193,8 @@ name {
 }
 
 .paper_tb {
-  padding: 15px 15px 15px 20px;
-  width: 35%;
+  padding: 10px 10px 10px 20px;
+  width: 33%;
   vertical-align: top;
 }
 
@@ -204,20 +207,12 @@ name {
 
 .paper_tb img {
   width: 100%;
-  border-radius: 10px;
-	/* border: 1px solid black; */
-  overflow: hidden;
-  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.35);
-}
-
-.paper_tb img {
-  width: 100%;
-  max-width: 300px;      /* Adjust as needed */
+  max-width: 280px;
   height: auto;
-  aspect-ratio: 16 / 8;   /* Or 1 / 1 for square, 16 / 9 for widescreen */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid black;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -240,10 +235,10 @@ name {
 }
 
 .paper_details {
-  padding: 15px 20px 15px 15px;
-  width: 65%;
+  padding: 10px 20px 10px 10px;
+  width: 67%;
   vertical-align: top;
-  line-height: 22px;
+  line-height: 18px;
 }
 
 @media (max-width: 675px) {
